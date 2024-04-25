@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/general.css">
+  <title>CSS Lernen</title>
+</head>
+
+<body>
+  <a href="../index.html" id="back"><button>←</button></a>
+
+  <div class="container">
+    <div class="card" style="min-height: auto !important; ">
+      <h2>Einführung:</h2>
+      <p>Im folgenden werdet ihr einige Aspekte von CSS lernen. Damit ihr diese aber ausprobieren könnt, bräuchtet ihr
+        normalerweise
+        so einige Tools, welche ihr installieren müsstet. Da das allerdings einiges an zeit beanspruchen würde, gibt es
+        hierfür einen einfacheren Weg.
+        Geht nämlich auf die Website <a href="https://codepen.io/" target="_blank"
+          style="color: rgb(7, 78, 178)">Codepen</a>, auf welcher ihr diesen und später auch euren eigenen Code
+        ausführen könnt.
+        <br><br>
+      <pre style="padding: 20px;">💡 Wenn ihr euch einen Account auf der Website erstellt, dann könnt ihr euren 
+   Code dort speichern und Zuhause weitermachen.</pre>
+      <pre style="padding: 20px;">🛑 Packt den HTML Code immer in die HTML Spalte auf CodePen und den CSS Code in
+    die CSS Spalte.</pre>
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Selektoren Basics</h2>
+      <p>
+        Im folgenden Beispiel sehen wir fünf Container, wobei die ersten beide keine ID oder Klasse haben, die nächsten
+        beide eine Klasse und das letzte eine ID und Klasse. <br> <br>
+        Gehen wir Schritt für Schritt auf alles ein:
+      <pre style="padding: 20px;">💡 Ich hab eine Eigenschaft vorweg genommen, um einen Abstand zwischen den 
+   Containern zu erzeugen. Diese daher nicht beachten (margin). </pre>
+
+      <ol style="text-align: justify;">
+        <li>Die ersten beiden Container haben zwar keine ID oder Klasse, aber im CSS Code haben wir ihnen trotzdessen
+          eine Hintergrundfarbe zuweisen können.
+          Dies haben wir getan, indem wir dem gesamtem Container Element (div) eine Hintergrundfarbe zugewiesen haben.
+          Das heißt, jedes Container-Element,
+          sofern es nicht anders überschrieben worden ist, hat nun die Hintergrundfarbe <i>lightgreen</i>.
+        </li>
+        <br>
+        <li>Als nächstes haben wir zwei Container mit der Klasse <i>box</i> erstellt. Im CSS haben wir mithilfe des
+          <b>Punkt-Selektors</b> festgelegt,
+          dass jedes Element mit der Klasse "box" die Hintergrundfarbe <i>lightcoral</i> haben soll. Was einem hier
+          auffällt ist, dass wir dadurch
+          die zuvor eingestellte CSS Eigenschaft für jedes Container-Element überschrieben haben. Das liegt daran, dass
+          Eigenschaften, die durch Klassen
+          festgelegt wurden, eine höhere Priorität haben, als Eigenschaften, die für eine Gruppe von Elementen gilt.
+        </li>
+        <br>
+        <li>
+          Zuletzt haben wir einen Container mit der ID <i>box1</i> und der Klassse <i>box</i>. Im CSS haben wir
+          festgelegt,
+          dass das Element mit der ID "box1" die Hintergrundfarbe <i>lightgreen</i> haben soll. Hierbei ist zu beachten,
+          dass
+          dadurch die Eigenschaft, welche die Klasse "box" mit sich bringt, auch überschrieben wurden, da ID's eine
+          höhere
+          Priorität haben als Klassen.
+        </li>
+        <br>
+        <li>
+          Im allgemeinen lässt sich anhand dieses Beispiels erkennen, dass CSS anhand von Prioritäten und Vererbungen
+          arbeitet.
+          Immerhin haben wir für die Klasse und die ID nicht festgelegt, wie groß ein Element sein soll. Doch wir haben
+          jedem Container-Element (div)
+          die Höhe von 200 pixeln und die Breite von 200 pixeln gegeben und da wir diese Eigenschaften nicht
+          überschrieben haben, werden sie "vererbt".
+        </li>
+      </ol>
+      </p>
+      <pre>
+        <code>
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+&lt;div id="box1" class="box"&gt;&lt;/div&gt;
+        </code></pre>
+      <pre>
+          <code>
+div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+}
+
+.box {
+  background-color: lightcoral;
+}
+
+#box1 {
+  background-color: lightgreen;
+}
+          </code></pre>
+      <p>CSS Selektoren sind noch <b>viel</b> mehr als das, aber für den Anfang sollte das genügen.</p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Texte, Links und Buttons Stylen</h2>
+      <p>
+        Im folgenden habe ich die verschiedensten Elemente anders gestyled. Einige der Eigenschaften mögen womöglich
+        selbsterklärend sein,
+        ich geh aber auf alle einmal ein:
+      </p>
+
+      <ul style="text-align: justify;">
+        <li><b>color: </b>Textfarbe innerhalb eines Element</li>
+        <li><b>background-color: </b>Die Hintergrundfarbe eines Elements</li>
+        <li><b>text-decoration: </b>Legt fest ob und wie der Text dekoriert werden soll. In diesem Beispiel haben wir
+          die linie unter dem Link entfernt.</li>
+        <li><b>border: </b> Legt eine Umrandung fest, wobei wir die Dicke, die Art und die Farbe einstellen können.</li>
+      </ul>
+
+      <pre style="padding: 20px;">💡 Wenn ihr auf CodePen "strg + LeerTaste" klickt, wird euch angezeigt, welche 
+   Auswahlmöglichkeiten es gibt, bei der jeweiligen Eigenschaft.</pre>
+
+      <pre>
+        <code>
+&lt;p&gt;Das ist Text innerhalb eines Paragraphen&lt;/p&gt;
+&lt;a&gt;Youtube&lt;/a&gt;
+&lt;button&gt;Klick mich!&lt;/button&gt;
+        </code></pre>
+      <pre>
+          <code>
+p {
+  color: #eeeeee;
+  background-color: black;
+  border: 5px solid green;
+}
+
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+button {
+  border: none;
+  background-color: blue;
+  color: white;
+}
+          </code></pre>
+      <p>Für die Farbe beim Paragraphen habe ich - statt einem Begriff wie bei der Border - einen Farbcode benutzt. Auf
+        folgender Website findet ihr
+        viele verschiedene Farbcodes: <a href="https://flatuicolors.com/" target="_blank"
+          style="color: rgb(7, 78, 178)">UI Colors</a>
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Innere und äußere Abstände</h2>
+      <p>
+        In diesem Beispiel haben wir wieder zwei Container, wobei beide die Klasse "box" haben und der zweite die ID
+        "test". Wir haben ihnen
+        folgende CSS Eigenschaften zugewiesen:
+      </p>
+
+      <ul style="text-align: justify;">
+        <li><b>margin: </b> Erzeugt einen Abstand um das Element herum.</li>
+        <li><b>padding: </b> Erzeugt einen Abstand innerhalb des Elements.</li>
+      </ul>
+
+      <p>
+        Wir haben für jede Box festgelegt, dass sie einen außen-Abstand von 10 Pixeln haben soll. Nur für die Box mit
+        der ID
+        "test" haben wir gesagt, dass sie auch einen inneren Abstand von 20 bzw. 10 Pixeln haben soll. Dabei hat sie
+        oben und unten
+        20 Pixel inneren Abstand und links und rechts 10 Pixel inneren Abstand. Dieser lässt den Text je nach Fall
+        besser aussehen.
+      </p>
+      <pre>
+        <code>
+&lt;div class="box"&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+&lt;div class="box" id="test"&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+        </code></pre>
+      <pre>
+          <code>
+.box {
+  background-color: lightblue;
+  margin: 10px;
+}
+
+#test {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+          </code></pre>
+
+      <p>
+        Statt wir für jede Seite den Abstand einzeln festlegen müssen, können wir auch die kurzschreibweise verwenden.
+        Dabei gibt es drei Arten:
+      <ol style="text-align: justify;">
+        <li>Entweder wir legen einen einheitlichen Wert für alle Seite für alle Seiten fest </li>
+        <li>Oder legen jeweils ein Wert für den Vertikalen und den Horizontalen Abstand fest</li>
+        <li>Oder aber wir legen einen für jede Seite fest. Hierbei fangen wir mit dem Wert für Oben an und gehen
+          im Uhrzeigersinn bis zum letzen Wert (für die linke Seite).
+        </li>
+      </ol>
+      </p>
+
+      <pre>
+            <code>
+#test {
+  padding: 20px 10px;
+}
+            </code></pre>
+      <p>bzw.</p>
+
+      <pre>
+          <code>
+#test {
+  padding: 20px 10px 20px 10px;
+}
+          </code></pre>
+
+      <p>
+        💡 Eine Sache die auffällig sein könnte, wäre, dass beide Container-Elemente, die gesamte breite der Website
+        einnehmen und nicht
+        nebeneinander sind. Warum genau das so ist, schauen wir uns im nächsten Beispiel an!
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Display-Eigenschaft</h2>
+      <p>
+        Standardmäßig hat jedes Container Element die <i>display-block</i> Eigenschaft. Es nimmt also die gesamte Breite
+        der Website ein.
+        Allerdings können wir festlegen, dass es sich ein wenig anders Verhalten soll. Zum Beispiel könnte es sein, dass
+        wir mehrere Boxen
+        nebeneinander haben möchten, diese aber immernoch alle sonstigen Eigenschaften behalten sollen. Hierfür können
+        wir die "display" Eigenschaft
+        auf den Wert <i>inline-block</i> setzen, wodurch die Boxen nun nebeneinander sind. Es gibt noch weitere Werte
+        für die "display" Eigenschaft,
+        auf welche ich aber im folgenden nicht genauer drauf eingehen werde.
+      </p>
+      <pre>
+        <code>
+&lt;div&gt;Text&lt;/div&gt;
+&lt;div&gt;Text&lt;/div&gt;
+        </code></pre>
+      <pre>
+          <code>
+div {
+  background-color: lightblue;
+  display: inline-block;
+  padding: 50px;
+  margin: 10px;
+}
+          </code></pre>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Hover</h2>
+      <p>
+        Die meiner Meinung nach coolste Sache in CSS ist die Möglichkeit Mouse-Events festzulegen und eins ist ganz
+        besonders cool:
+        Das Hover Event. Mit diesem legt man fest, was sich innerhalb eines Elements oder einer Gruppe von Elementen
+        ändern soll,
+        wenn man mit der Maus drüber fährt. In diesem Beispiel ändern wir die Farbe. Allerdings könnte man (fast) jede
+        CSS Eigenschaft
+        ändern.
+      </p>
+      <pre>
+        <code>
+&lt;div id="box"&gt;&lt;/div&gt;
+        </code></pre>
+      <pre>
+          <code>
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+}
+
+#box:hover {
+  background-color: lightcoral;
+}
+          </code></pre>
+    </div>
+
+    <hr>
+
+    <div class="card" style="min-height: auto;">
+      <h2>Die Nächsten Schritte!</h2>
+      <p>
+        CSS ist so umfangreich, dass das bisher gezeigte nicht einmal die Basics umfasst. Allerdings solltet ihr nun ein
+        gewisses Gefühl dazu bekommen haben, wie man Elemente erstellt und sie styled. Im Nächsten Abschnitt schauen wir
+        uns daher an,
+        wie ihr eurer Website Funktionen verpassen könnt. Wenn ihr allerdings noch ein wenig mehr über CSS erfahren
+        möchtet,
+        schaut auf folgender Website nach <a href="https://www.w3schools.com/css/default.asp" target="_blank" style="color: rgb(7, 78, 178)">W3Schools</a> 
+        oder fragt mich persönlich nach etwas.
+      </p>
+    </div>
+
+    <hr>
+
+  </div>
+
+  <h1 style="position: fixed; bottom: 0; right: 20px; opacity: 0.5;">&copy; by Yasin Aydin</h1>
+</body>
+
+</html>

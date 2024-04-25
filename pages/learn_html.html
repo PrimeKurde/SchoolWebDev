@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/general.css">
+  <title>HTML Lernen</title>
+</head>
+
+<body>
+  <a href="../index.html" id="back"><button>←</button></a>
+
+  <div class="container">
+    <div class="card" style="min-height: auto !important; ">
+      <h2>Einführung:</h2>
+      <p>Im folgenden werdet ihr einige Aspekte von HTML lernen. Damit ihr diese aber ausprobieren könnt, bräuchtet ihr
+        normalerweise
+        so einige Tools, welche ihr installieren müsstet. Da das allerdings einiges an zeit beanspruchen würde, gibt es
+        hierfür einen einfacheren Weg.
+        Geht nämlich auf die Website <a href="https://codepen.io/" target="_blank"
+          style="color: rgb(7, 78, 178)">Codepen</a>, auf welcher ihr diesen und später auch euren eigenen Code
+        ausführen könnt.
+        <br><br>
+      <pre style="padding: 20px;">💡 Wenn ihr euch einen Account auf der Website erstellt, dann könnt ihr euren 
+   Code dort speichern und Zuhause weitermachen.</pre>
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Überschriften</h2>
+      <p>In HTML gibt es ein »Tag« ("Täg") mit welchem ihr <b>Überschriften</b> erstellen könnt. Die Rede ist vom
+        <i><code>&lt;h1&gt;</code>-tag</i>. Hierbei ist zu beachten,
+        dass es schon mehrere Größen gibt, zwischen welchen man wählen kann. Diese reichen von eins bis sechs. Dabei ist
+        das <code>&lt;h1&gt;</code>-tag die größte
+        und das <code>&lt;h6&gt;</code> die kleinste Überschrift. Andere Größen, müssten wir mit CSS festlegen (lernen
+        wir später).
+      </p>
+      <pre>
+        <code>
+&lt;h1&gt;Überschrift 1&lt;/h1&gt;
+&lt;h2&gt;Überschrift 2&lt;/h2&gt;
+&lt;h3&gt;Überschrift 3&lt;/h3&gt;
+&lt;h4&gt;Überschrift 4&lt;/h4&gt;
+&lt;h5&gt;Überschrift 5&lt;/h5&gt;
+&lt;h6&gt;Überschrift 6&lt;/h6&gt;
+        </code></pre>
+      <p>Nehmt euch einfach diesen Code und kopiert ihn auf die HTML Sektion von Codepen.
+        Optional könnt ihr auch ein wenig mit ihm rumspielen.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Texte</h2>
+      <p>Es gibt verschiedene Arten Text in HTML darzustellen. Prinzipiell kann man Text ohne zusätzliche Tags
+        schreiben,
+        allerdings empfiehlt es sich - in den meisten Fällen - ein <i><code>&lt;p&gt;</code>-tag</i> zu nutzen.
+        Dieses steht für einen Paragraphen und bringt gewisse Vorteile (Stylings) mit sich.
+      </p>
+      <pre>
+        <code>
+Das ist "loßer" Text.
+&lt;p&gt;Das ist Text in einem Paragraphen.&lt;/p&gt;
+        </code></pre>
+      <p>
+        Der Text ist einem Paragraphen hat unteranderem einen Abstand um sich herum, welcher oft hilfreich ist.
+        Dadurch müssen wir nicht immer manuell diesen mit CSS einstellen, sondern nutzen den Tag und fertig.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Links</h2>
+      <p>Um Links auf gewisse Websiten zu erstellen, müssen wir das <i><code>&lt;a&gt;</code>-tag</i> (anker-tag)
+        nutzen.
+        Dieses besitzt mehrere Attribute, welche uns unteranderem erlauben, festzulegen, wie und auf welche Website man
+        gelangt, wenn man diesen Link anklickt. <br> <br>Innerhalb des <i>href</i>-Attributs kommt der Link der Website.
+      </p>
+      <pre>
+          <code>
+&lt;a href="https://www.youtube.com/"&gt;Klick mich!&lt;/a&gt;
+          </code></pre>
+      <p>Wenn man auf diesen Link klickt, sollte sich Youtube öffnen. Allerdings geschieht dies im selben Tab und nicht
+        in einem neuen.
+        Um dieses Verhalten zu ändern, können wir das <i>target</i>-Attribut bearbeiten und festlegen, dass er die
+        Website in einem neuen
+        Tab öffnen soll. Dies tun wir folgendermaßen:
+      </p>
+      <pre>
+        <code>
+&lt;a href="https://www.youtube.com/" target="_blank"&gt;Klick mich!&lt;/a&gt;
+        </code></pre>
+      <p>Nun sollte die Website in einem neuen Tab geöffnet werden.</p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Boxen / Container</h2>
+      <p>Container sind in HTML eine der wichtigsten Elemente. Schaut man sich die Struktur und den Aufbau vieler
+        Websiten an,
+        sieht man dieses Tag unglaublich oft. Die Rede ist vom <i><code>&lt;div&gt;</code>-tag</i>. Anfangs tut dieses
+        Tag nicht
+        wirklich viel. Später allerdings - sobald wir CSS lernen - wird es sehr hilfreich sein und so einige coole Dinge
+        ermöglichen.
+      </p>
+      <pre>
+          <code>
+&lt;div&gt;
+  Text innerhalb eines div-Tags.
+&lt;/div&gt;
+          </code></pre>
+      <p>💡 Falls ihr sehen möchtet, was das div-Tag kann, hier eine kleine demonstration (die ein wenig advanced ist):
+      </p>
+      <pre>
+        <code>
+&lt;style&gt;
+  div {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+  }
+&lt;/style&gt;
+&lt;div&gt;&lt;/div&gt;
+        </code></pre>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Bilder</h2>
+      <p>Wenn ihr Bilder auf eure Website tun möchtet, dann könnt ihr das <i><code>&lt;img&gt;</code>-tag</i> verwenden.
+        Durch das <i>src</i>-Attribut müsst ihr die Quelle (source) des Bilds festlegen, also einen Link oder den
+        Dateipfad.
+        Außerdem könnt ihr auch einen Text festlegen (<i>alt</i>-Attribut), welcher angezeigt werden soll, wenn das Bild
+        nicht
+        geladen werden kann.</p>
+      <pre>
+          <code>
+&lt;img src="https://shorturl.at/lmxAF" alt="Bild eines Sängers" /&gt;
+          </code></pre>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Buttons</h2>
+      <p>Buttons sind ein Weg, wie ihr eure Website interaktiv machen könnt. Hierzu benötigt ihr allerdings erstmal den
+        Button selbst.
+        Diesen erstellt hier mithilfe des <i><code>&lt;button&gt;</code>-tag</i>.
+      </p>
+      <pre>
+          <code>
+&lt;button&gt;Klick mich&lt;/button&gt;
+          </code></pre>
+      <p>💡 Später können wir mit CSS den Button stylen und mit Javascript etwas bestimmtes tun, wenn auf den Button
+        geklickt wird.
+        Beispielsweise könnten wir das Website design ändern, ein PopUp öffnen oder sonstige Dinge tun.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Klassen</h2>
+      <p>Klassen sind Attribute, die man (fast) jedem HTML-Element geben kann. Sie sind der Hauptweg, wie wir später
+        mit CSS festlegen, welche Elemente wir stylen möchten. Hierbei ist zu beachten, dass es keine Begrenzung dafür
+        gibt,
+        wie viele Elemente eine Klasse haben darf und ein Element selbst darf (nahezu) unendlich viele Klassen besitzen.
+      </p>
+      <pre>
+          <code>
+&lt;div class="box"&gt;&lt;/div&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+&lt;div class="box"&gt;&lt;/div&gt;
+          </code></pre>
+      <p>Möchten wir einem Element zwei Klassen geben, trennen wir diese einfach mit einem Leerzeichen.</p>
+      <pre>
+        <code>
+&lt;div class="class1 class2"&gt;&lt;/div&gt;
+        </code></pre>
+      <p>🛑 Addressieren tut man Klassen in CSS mit dem <b><code>.</code></b> Selektor. (Mehr dazu im CSS Abschnitt)</p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>ID's</h2>
+      <p>ID's basieren auf dem selben Prinzip wie Klassen, mit dem Unterschied, dass sie einzigartig sind. Während wir
+        also hundert Elementen die Klasse <code>box</code> geben können, darf nur ein Element die ID
+        <code>blue-box</code> haben.
+      </p>
+      <pre>
+          <code>
+&lt;div id="blue-box"&gt;&lt;/div&gt;
+          </code></pre>
+      <p>🛑 Addressieren tut man ID's in CSS mit dem <b><code>#</code></b> Selektor. (Mehr dazu im CSS Abschnitt)</p>
+    </div>
+
+    <hr>
+
+    <div class="card" style="min-height: auto;">
+      <h2>Die Nächsten Schritte!</h2>
+      <p>Das wären einige der Basics von HTML. Es gibt <b>deutlich</b> mehr, aber vieles lässt sich auch googlen.
+        Jedenfalls
+        könnt ihr nun entweder direkt zum CSS Abschnitt, oder ein wenig rumspielen mit den Basics von HTML und optional
+        auch
+        noch ein wenig mehr recherchieren darüber. Auf folgender Website findet ihr viele nützliche Dokumentationen: <a
+          href="https://www.w3schools.com/html/default.asp" target="_blank" style="color: rgb(7, 78, 178)">W3Schools</a>
+      </p>
+      
+    </div>
+
+    <hr>
+
+  </div>
+
+  <h1 style="position: fixed; bottom: 0; right: 20px; opacity: 0.5;">&copy; by Yasin Aydin</h1>
+</body>
+
+</html>
