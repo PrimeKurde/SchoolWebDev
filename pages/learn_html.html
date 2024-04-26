@@ -204,6 +204,63 @@ Das ist "loßer" Text.
 
     <hr>
 
+    <div class="card">
+      <h2>Verschachteln</h2>
+      <p>Elemente ineinander zu verschachteln ist wohl das meiste, was man in HTML tut. Dies kann verschiedenste Gründe
+        haben.
+        Manchmal will man die Eigenschaften eines Elements innerhalb eines anderen nutzen und verschachtelt sie somit.
+        Im folgenden
+        Beispiel haben wir zwei Buttons, wobei in dem ersten der Text zwischen dem Start- und dem End-Tag steht und beim
+        zweiten ist
+        der Text noch von einem Paragraphen umgeben. Dadurch dass ein Paragraph verschiedene Stylings von Anfang an mit
+        sich bringt (margin; siehe CSS),
+        sieht der Button nun ein wenig anders aus.
+      </p>
+      <pre>
+          <code>
+&lt;button&gt;Klick Mich!&lt;/button&gt;
+&lt;button&gt;
+  &lt;p&gt;Klick mich!&lt;/p&gt;
+&lt;/button&gt;
+          </code></pre>
+
+      <p>💡 Theoretisch könnte man fast nur mit Containern arbeiten und manuell jedem einzelnen Container eine ID und Klasse geben
+        und ihnen somit dann alle Eigenschaften, die man immer benötigt, geben. Dies würde allerdings viel zu viel Zeit
+        in Anspruch nehmen und folglich lohnt es sich also mehr, eine Mischung aus einigen anderen Tags zu nehmen.
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>Etwas Theorie</h2>
+      <p>Der unten stehende Code nennt sich auch "Boilerplate-Code". Es ist Code, welcher in jeder Website ist. Auch ihr habt ihn bisher
+        genutzt. CodePen setzt den Code, welchen ihr in die HTML Spalte tippt, genau dort rein. Um genau zu sein, in dem Body-Tag. Dieser beschreibt
+        nämlich den Körper eurer Website, also alles was der User am Ende sieht. In den head kommen alle Einstellungen bzw. Dinge, die der User nicht direkt
+        sieht, wie der Titel der Website, welcher oben im Tab steht. Umgeben sind diese beiden Tags vom html-Tag, welches das äußerste Tag ist und somit
+        als "root"-Tag (Wurzel) bezeichnet wird. Die Wurzel eurer Website, eures HTML Baums sozusagen. 
+      </p>
+      <p>
+        Warum das alles so wichtig ist? Wenn ihr später eure eigene Website selbst schreiben möchtet, dann müsst ihr diesen Startcode auch nutzen.
+        Durch ihn weiß die Website wo sich die Einstellungen und wo die Struktur zu finden ist. Jedenfalls wollte ich das nur einmal gezeigt haben, da es auch 
+        in CSS eine große Rolle spielen wird. Wenn ihr beispielsweise der gesamten Website einen Hintergrund geben wollt, dann könnt ihr dem body-tag eine
+        Hintergrundfarbe zuweisen. Dazu aber im CSS Teil mehr!
+      </p>
+      <pre>
+          <code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Titel&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    hier rein kommt euer Code
+  &lt;/body&gt;
+&lt;/html&gt;
+          </code></pre>
+    </div>
+
+    <hr>
+
     <div class="card" style="min-height: auto;">
       <h2>Die Nächsten Schritte!</h2>
       <p>Das wären einige der Basics von HTML. Es gibt <b>deutlich</b> mehr, aber vieles lässt sich auch googlen.
@@ -213,7 +270,7 @@ Das ist "loßer" Text.
         noch ein wenig mehr recherchieren darüber. Auf folgender Website findet ihr viele nützliche Dokumentationen: <a
           href="https://www.w3schools.com/html/default.asp" target="_blank" style="color: rgb(7, 78, 178)">W3Schools</a>
       </p>
-      
+
     </div>
 
     <hr>
